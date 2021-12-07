@@ -11,6 +11,7 @@ export class AppComponent {
   numbers = false;
   symbols = false;
   password = '';
+  copyMsg = 'Copy';
 
   onGetLength = (event: any) => {
     this.length = +event.target.value;
@@ -49,5 +50,10 @@ export class AppComponent {
       generatedPassowrd += validChar[randomIndex];
     }
     this.password = generatedPassowrd;
+  };
+
+  onCopy = () => {
+    navigator.clipboard.writeText(this.password);
+    this.copyMsg = 'Copied';
   };
 }

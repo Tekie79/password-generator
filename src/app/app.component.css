@@ -5,3 +5,7 @@
   text-align: center;
   margin-top: 200px;
 }
+.copy{
+    text-align: right;
+    cursor: pointer;
+}
